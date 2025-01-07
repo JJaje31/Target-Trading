@@ -67,7 +67,7 @@ const SignUp = () => {
     <div className="flex items-center justify-center min-h-screen bg-gray-50 mt-20">
       <div className="w-full sm:w-96 p-8 bg-white shadow-lg rounded-lg">
         <h2 className="text-2xl font-bold text-gray-800 text-center mb-6">
-          Get Personalized Recommendations
+          Lets Get Started
         </h2>
         {message && (
           <p className={`text-center ${textColor} font-medium mb-4`}>{message}</p>
