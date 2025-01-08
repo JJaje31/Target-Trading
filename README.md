@@ -46,5 +46,5 @@
 
 ---
 
-This app is designed as a portfolio project to showcase your skills in AI integration and app development. Future updates will bring full functionality once the necessary backend services are live.
+This app is designed as a portfolio project to showcase my skills in AI integration and app development. Future updates will bring full functionality once the necessary backend services are live.
 
