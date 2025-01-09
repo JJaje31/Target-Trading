@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcrypt');
 const stockSchema = require('./stock');
-const { trusted } = require('mongoose');
+
 
 const userSchema = new mongoose.Schema({
-    username:{type:String,required:trusted},
+    username:{type:String,unique:true},
     email:{type:String,required:true,select:false},
     password:{type:String,required:true,select:false },
     passwordHash:{type:String},
