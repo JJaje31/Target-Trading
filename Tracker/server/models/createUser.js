@@ -11,6 +11,8 @@ const userSchema = new mongoose.Schema({
     stocks:[stockSchema]
 });
 
+
+
 userSchema.pre('save', async function(next){
     if(this.isModified('username') || this.isNew){
         const exsistingUser = await mongoose.model('User').findOne({username:this.username})

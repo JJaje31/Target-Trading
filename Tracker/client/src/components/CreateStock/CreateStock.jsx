@@ -58,7 +58,7 @@ setLoggedIn(true)
         setText(response.data.message);
         setMessage(response.data.message);
       } catch (err) {
-        console.log(err)
+        console.log(err.response.status)
           if (err.response.status === 401) {
             setMessage('Session expired, please log back in!!');
             setText(message)
@@ -68,8 +68,9 @@ setLoggedIn(true)
             }, 5000);
           } 
           if(err.response.status === 400){
-            setText('This stock already exsists in My Stocks!!')
+            setMessage('This stock already exsists in My Stocks!!')
             setText(message)
+           
           }
           if(err.response.status === 500){
             setMessage('The number of shares must be input!!');
