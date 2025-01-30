@@ -83,7 +83,7 @@ setLoggedIn(true)
 
     setTimeout(() => {
       setMessage('')
-    },10000)
+    },5000)
   
   
     const handleInvestmentAnalysis = async () => {

@@ -2,6 +2,9 @@ const User = require('../models/createUser');
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const axios = require('axios')
+require('dotenv').config();
+const stockStatus = process.env.USER_STOCK_STATUS;
+const stockAdviser = process.env.STOCKMARKET_ADVISER
 
 
 const newUser = async (req, res) => {
@@ -50,7 +53,7 @@ investmentAI = async (req, res) => {
     const { userId } = req.user;
 
     try {
-        const flowiseResponse = await axios.post("http://localhost:3000/api/v1/prediction/2509d47f-7264-4fba-902e-7ff17c5c2852",
+        const flowiseResponse = await axios.post(stockAdviser,
             { question },
             {
                 headers: {
@@ -163,7 +166,7 @@ myStockInvestmentAI = async (req, res) => {
 
 
 
-        const flowiseResponse = await axios.post('http://localhost:3000/api/v1/prediction/2d64ace9-0a93-40b0-ad9c-effebce761e2',
+        const flowiseResponse = await axios.post(stockStatus,
             { question },
             {
                 headers: {
