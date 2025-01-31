@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from 'axios'
 import { useParams } from "react-router";
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 const AddSharesModal = ({id,setUpdated}) => {
   const [shares,setShares] = useState('')
@@ -8,7 +9,7 @@ const {userId} = useParams()
 
 
   const handleAddShares = async() => {
-  const response = await axios.put(`http://localhost:5000/api/updateshares/${id}`,
+  const response = await axios.put(`${backendUrl}/api/updateshares/${id}`,
   {shares},
   {
     headers:{

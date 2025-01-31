@@ -5,6 +5,7 @@ import AnalysisModal from '../Modals/AnalysisModal2'
 import AddModal from '../Modals/AddModal'
 import DeleteModal from '../Modals/DeleteModal'
 import axios from 'axios'
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 const StockList = ({setLoggedIn}) => {
   const {userId} = useParams()
@@ -19,7 +20,7 @@ const StockList = ({setLoggedIn}) => {
 
     const userStocks = async() =>{
       try{
-          const response = await axios.post('http://localhost:5000/api/userstocks',
+          const response = await axios.post(`${backendUrl}/api/userstocks`,
           {userId},
           {
             headers:{

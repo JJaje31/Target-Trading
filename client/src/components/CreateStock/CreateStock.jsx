@@ -2,6 +2,7 @@ import React, { useState,useEffect } from 'react';
 import {useParams} from 'react-router'
 import axios from 'axios'
 import AnalysisModal from '../Modals/AnalysisModal1';
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 
 const CreateStock = ({setLoggedIn}) => {
@@ -46,7 +47,7 @@ setLoggedIn(true)
     const handleAdd = async (stockName, shares) => {
       try {
         const response = await axios.post(
-          'http://localhost:5000/api/addstock',
+          `${backendUrl}/api/addstock`,
           { stock: stockName, shares: shares }, 
           {
             headers: {
@@ -102,7 +103,7 @@ setLoggedIn(true)
 
     const fetchStockAnalysis = async (stock) => {
       try{
-      const response = await fetch("http://localhost:5000/api/adviser",
+      const response = await fetch(`${backendUrl}/api/adviser`,
       {
         method:"Post",
         headers: {

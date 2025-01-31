@@ -1,4 +1,5 @@
 import {useState} from 'react'
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 const SignUp = () => {
   const [textColor,setTextColor] = useState('')
@@ -29,7 +30,7 @@ const SignUp = () => {
     }
   
     try {
-      const response = await fetch("http://localhost:5000/signup", {
+      const response = await fetch(`${backendUrl}/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -128,6 +129,10 @@ const SignUp = () => {
               placeholder="Re-enter your password"
               required
             />
+          </div>
+          <div className='mb-5 flex justify-center'>
+            <p className='text-gray-700 mr-2'>Have an account?</p>
+            <a className='text-blue-400 hover:text-blue-600' href="/SignIn">Sign In</a>
           </div>
           <button
             type="submit"

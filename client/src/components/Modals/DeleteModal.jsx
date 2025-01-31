@@ -1,6 +1,7 @@
 import React from "react";
 import axios from 'axios'
 import { useParams } from "react-router";
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 const DeleteStockModal = ({id,stocks, setStocks}) => {
 const {userId} = useParams()
@@ -12,7 +13,7 @@ const closeModal = () => {
   const handleDelete = async() => {
     try{
    
-      const response = await axios.delete(`http://localhost:5000/api/stockdelete/${id}`
+      const response = await axios.delete(`${backendUrl}/api/stockdelete/${id}`
       ,
       {
         headers:{

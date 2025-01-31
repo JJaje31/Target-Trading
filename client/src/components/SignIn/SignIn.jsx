@@ -1,4 +1,5 @@
 import {useState} from 'react';
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 
 const SignIn = () => {
@@ -13,7 +14,7 @@ const SignIn = () => {
   const sendSignIn = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/signin", {
+      const response = await fetch(`${backendUrl}/signin`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -80,6 +81,10 @@ const SignIn = () => {
               placeholder="Enter your password"
               required
             />
+          </div>
+          <div className='mb-5 flex justify-center'>
+            <p className='text-gray-700 mr-2'>Don't have an account?</p>
+            <a className='text-blue-400 hover:text-blue-600' href="/SignUp">Sign Up</a>
           </div>
           <button
             type="submit"

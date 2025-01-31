@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 
+
 const AnalysisModal1 = ({id,loading,data,analysisFunction,stock,setDisplayText}) => {
 
   const modalClose = () => {

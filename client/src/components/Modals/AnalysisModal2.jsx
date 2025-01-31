@@ -1,6 +1,7 @@
 import {useState} from 'react';
 import {useParams} from 'react-router';
 import axios from 'axios'
+const backendUrl = import.meta.env.VITE_API_ULR;
 
 const AnalysisModal2 = ({id,stocks}) => {
     const [loading,setLoading] = useState(false)
@@ -16,7 +17,7 @@ const AnalysisModal2 = ({id,stocks}) => {
       try{
         setLoading(true)
         let currentStock = stocks.filter((items) => items._id === id)
-        const response = await axios.post(`http://localhost:5000/api/user/adviser`,
+        const response = await axios.post(`${backendUrl}/api/user/adviser`,
        currentStock[0],
         {
             headers:{
