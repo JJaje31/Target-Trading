@@ -2,29 +2,9 @@
 **Target-Trading** is an AI-powered application that helps you track and analyze the performance of your stock investments.
 
 ## Usage
-### Running the Server
-1. Navigate to the server folder:
-   ```bash
-   cd server
-   ```
-2. Start the server:
-   ```bash
-   npm start
-   ```
-   The server runs on **localhost:5000**.
+## Live Demo
+[Target Trading](https://target-trading.vercel.app) is now live! Empower your investment decisions with AI-driven stock analysis. Try it out today!
 
-### Running the Client
-1. Navigate to the client folder:
-   ```bash
-   cd client
-   ```
-2. Start the React development server:
-   ```bash
-   npm run dev
-   ```
-   The client runs on **localhost:5173**.
-
-**Note:** This app requires integration with your Flowise setup and portfolio, which will be hosted in the cloud. These updates are expected to be completed within the next month. Until then, this app is a demonstration for job recruiters and potential employers.
 
 ## Features
 - **User Accounts**: 
@@ -44,7 +24,5 @@
   - View and manage all your investments in one place.
   - Use AI to track your stock’s in real-time market performance.
 
----
 
-This app is designed as a portfolio project to showcase my skills in AI integration and app development. Future updates will bring full functionality once the necessary backend services are live.
 
